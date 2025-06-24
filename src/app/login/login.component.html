@@ -1,0 +1,51 @@
+<form class="login-form" #loginForm="ngForm" (submit)="login()">
+  <div class="login-container">
+    <div class="login_formulario">
+      <div class="login_header">
+        <h1>Login</h1>
+        <p>Por favor ingrese sus credenciales para acceder al sistema.</p>
+      </div>
+      <div class="login_body">
+        <div class="form-group">
+          <input
+            type="text"
+            id="usuario"
+            placeholder=" "
+            required
+            name="username"
+            [(ngModel)]="username"
+          />
+          <label for="usuario">Usuario</label>
+        </div>
+        <div class="form-group">
+          <input
+            type="password"
+            id="password"
+            placeholder=" "
+            required
+            name="password"
+            [(ngModel)]="password"
+          />
+          <label for="password">Password</label>
+        </div>
+        <div class="form-checkbox">
+          <div class="checkbox-group">
+            <input type="checkbox" id="terms" />
+            <p>Recuérdame</p>
+          </div>
+          <div class="password-reset">
+            <a href="#">¿Olvidaste tu contraseña?</a>
+          </div>
+        </div>
+        <div class="login-button">
+          <button class="btn" type="submit" [disabled]="!loginForm.valid">
+            Iniciar Sesión
+          </button>
+        </div>
+        <div class="login-user-new">
+          <p>¿No tienes una cuenta? <a>Crear usuario nuevo</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</form>
