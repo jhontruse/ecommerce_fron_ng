@@ -1,0 +1,141 @@
+.new-login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  width: 100vw; /* Ocupa toda la anchura de la ventana */
+  position: relative; /* Permite posicionar elementos hijos */
+  overflow: hidden; /* Evita el desbordamiento de contenido */
+  background-image: url("/img/login/wallpaper_login_full.png");
+  background-size: cover; /* Ajusta la imagen sin distorsionarla */
+  background-attachment: fixed; /* Fija la imagen al fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+.new-login-formulario {
+  position: relative; /* Permite posicionar elementos hijos */
+  width: 400px; /* Ancho del formulario */
+  height: auto;
+  border-radius: 20px; /* Bordes redondeados */
+  backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+  background: (rgba(255, 255, 255, 0.1)); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* Borde semitransparente */
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
+  z-index: 10; /* Asegura que el formulario esté por encima de otros elementos */
+  padding: 40px; /* Espacio interno del formulario */
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Coloca los elementos en columna */
+  flex-wrap: wrap;
+  align-items: center; /* Centra los elementos horizontalmente */
+  overflow: hidden; /* Evita el desbordamiento de contenido */
+}
+.new-login-header {
+  text-align: center;
+  width: 100%; /* Ancho completo del encabezado */
+}
+.new-login-header h1 {
+  font-size: 1.8rem; /* Tamaño de fuente grande */
+  color: #fff; /* Color del texto */
+  margin-bottom: 5px; /* Espacio debajo del título */
+  font-family: "Courier New", Courier, monospace;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto para dar profundidad */
+  font-weight: bold; /* Negrita para el título */
+  letter-spacing: 1px; /* Espaciado entre letras */
+  text-transform: uppercase; /* Transforma el texto a mayúsculas */
+  margin-top: 0; /* Elimina el margen superior */
+}
+.new-login-header p {
+  font-size: 1rem; /* Tamaño de fuente más pequeño */
+  color: #fff; /* Color del texto */
+  margin: 0%;
+}
+.new-login-form {
+  width: 100%; /* Ancho completo del contenedor */
+}
+.icon-text {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #333;
+  font-size: 16px;
+}
+.icon-text img {
+  width: 30px; /* Ajusta el tamaño del icono */
+  height: 30px; /* Ajusta el tamaño del icono */
+  vertical-align: middle; /* Alinea verticalmente el icono con el texto */
+}
+
+.new-login-input {
+  width: 100%;
+  position: relative;
+  margin-top: 10px; /* Espacio entre los campos del formulario */
+}
+
+.new-login-input-2{
+  width: 15%;
+  position: relative;
+  margin-top: 10px; /* Espacio entre los campos del formulario */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 95%;
+  padding: 12px 10px;
+  border: none;
+  border-bottom: 2px solid #999797;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+  border-color: #4a4848;
+}
+label {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  color: #7d7c7c;
+  font-weight: bold;
+  font-size: 16px;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus + label,
+input[type="password"]:focus + label,
+input[type="email"]:focus + label,
+input[type="text"]:not(:placeholder-shown) + label,
+input[type="password"]:not(:placeholder-shown) + label,
+input[type="email"]:not(:placeholder-shown) + label {
+  top: -12px;
+  left: 5px;
+  font-size: 18px;
+  color: #4a4949;
+}
+select {
+      width: 100%;
+      padding: 12px 10px;
+      font-size: 16px;
+      border: 2px solid #ccc;
+      border-radius: 6px;
+      background-color: transparent;
+      color: #333;
+      outline: none;
+      appearance: none;
+      background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      background-size: 16px;
+      cursor: pointer;
+      transition: border-color 0.3s ease;
+    }
+
+    select:focus {
+      border-color: #000;
+    }
