@@ -72,10 +72,18 @@
   margin-top: 10px; /* Espacio entre los campos del formulario */
 }
 
-.new-login-input-2{
-  width: 15%;
+.new-login-input-2 {
+  width: 100%;
   position: relative;
   margin-top: 10px; /* Espacio entre los campos del formulario */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.new-login-input-3 {
+  width: 45%;
+  position: relative;
 }
 
 input[type="text"],
@@ -119,23 +127,23 @@ input[type="email"]:not(:placeholder-shown) + label {
   color: #4a4949;
 }
 select {
-      width: 100%;
-      padding: 12px 10px;
-      font-size: 16px;
-      border: 2px solid #ccc;
-      border-radius: 6px;
-      background-color: transparent;
-      color: #333;
-      outline: none;
-      appearance: none;
-      background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
-      background-repeat: no-repeat;
-      background-position: right 10px center;
-      background-size: 16px;
-      cursor: pointer;
-      transition: border-color 0.3s ease;
-    }
+  width: 100%;
+  padding: 12px 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+  color: #333;
+  outline: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="black" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 16px;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
 
-    select:focus {
-      border-color: #000;
-    }
+select:focus {
+  border-color: #000;
+}
