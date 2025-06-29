@@ -15,7 +15,7 @@
 }
 .new-login-formulario {
   position: relative; /* Permite posicionar elementos hijos */
-  width: 400px; /* Ancho del formulario */
+  width: 500px; /* Ancho del formulario */
   height: auto;
   border-radius: 20px; /* Bordes redondeados */
   backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
@@ -23,7 +23,7 @@
   border: 1px solid rgba(255, 255, 255, 0.4); /* Borde semitransparente */
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
   z-index: 10; /* Asegura que el formulario esté por encima de otros elementos */
-  padding: 40px; /* Espacio interno del formulario */
+  padding: 10px; /* Espacio interno del formulario */
   display: flex; /* Utiliza flexbox para alinear los elementos */
   flex-direction: column; /* Coloca los elementos en columna */
   flex-wrap: wrap;
@@ -32,7 +32,7 @@
 }
 .new-login-header {
   text-align: center;
-  width: 100%; /* Ancho completo del encabezado */
+  width: 90%; /* Ancho completo del encabezado */
 }
 .new-login-header h1 {
   font-size: 1.8rem; /* Tamaño de fuente grande */
@@ -51,8 +51,15 @@
   margin: 0%;
 }
 .new-login-form {
-  width: 100%; /* Ancho completo del contenedor */
+  width: 90%; /* Ancho completo del contenedor */
+  margin-top: 25px; /* Espacio entre el encabezado y el formulario */
 }
+.new-login-form p,
+.new-login-form p img {
+  margin: 0; /* Centra el formulario horizontalmente */
+  padding: 0;
+}
+
 .icon-text {
   display: flex;
   align-items: center;
@@ -67,23 +74,21 @@
 }
 
 .new-login-input {
-  width: 100%;
+  width: 90%;
   position: relative;
-  margin-top: 10px; /* Espacio entre los campos del formulario */
-}
-
-.new-login-input-2 {
-  width: 100%;
-  position: relative;
-  margin-top: 10px; /* Espacio entre los campos del formulario */
+  margin-top: 18px; /* Espacio entre los campos del formulario */
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
 }
 
-.new-login-input-3 {
+.new-login-input-comp {
   width: 45%;
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 input[type="text"],
@@ -105,10 +110,10 @@ input[type="email"]:focus {
   border-color: #4a4848;
 }
 label {
-  position: absolute;
+  position: absolute; /* Permite posicionar el texto del label*/
   top: 12px;
-  left: 10px;
-  color: #7d7c7c;
+  left: 5px;
+  color: #403f3f;
   font-weight: bold;
   font-size: 16px;
   pointer-events: none;
@@ -123,8 +128,8 @@ input[type="password"]:not(:placeholder-shown) + label,
 input[type="email"]:not(:placeholder-shown) + label {
   top: -12px;
   left: 5px;
-  font-size: 18px;
-  color: #4a4949;
+  font-size: 11px;
+  color: #ffffff;
 }
 select {
   width: 100%;
@@ -146,4 +151,54 @@ select {
 
 select:focus {
   border-color: #000;
+}
+.login-button {
+  width: 100%;
+  padding: 12px;
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  border: none; /* Sin borde */
+  margin-top: 18px;
+}
+.btn {
+  position: relative; /* Permite posicionar elementos hijos */
+  width: 70%; /* Ancho del formulario */
+  height: auto;
+  border-radius: 20px; /* Bordes redondeados */
+  backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
+  background: (rgba(255, 255, 255, 0.8)); /* Fondo semitransparente */
+  border: 1px solid rgba(255, 255, 255, 0.8); /* Borde semitransparente */
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.9), 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
+  z-index: 20; /* Asegura que el formulario esté por encima de otros elementos */
+  padding: 15px; /* Espacio interno del formulario */
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  overflow: hidden; /* Evita el desbordamiento de contenido */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  color: #4b4b4b;
+}
+
+.btn:hover {
+  background-color: #222;
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  color: #fff; /* Cambia el color del texto al pasar el ratón */
+}
+
+.btn:active {
+  transform: scale(0.98);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #4b4b4b;
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
 }
