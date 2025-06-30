@@ -1,7 +1,7 @@
 export class Rol {
-  'idRol': string | undefined;
-  'nombre': string | undefined;
-  'detalle': string | undefined;
-  'fecCreacion': Date | undefined;
-  'activo': boolean | undefined;
+  'idRol': string;
+  'nombre': string;
+  'detalle': string;
+  'fecCreacion': Date;
+  'activo': boolean;
 }

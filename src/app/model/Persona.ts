@@ -1,10 +1,10 @@
 export class Persona {
-  'dni': string | undefined;
-  'nombre': string | undefined;
-  'apePaterno': string | undefined;
-  'apeMaterno': string | undefined;
-  'sexo': string | undefined;
-  'telefono': string | undefined;
-  'direccion': string | undefined;
-  'activo': boolean | undefined;
+  'dni': string;
+  'nombre': string;
+  'apePaterno': string;
+  'apeMaterno': string;
+  'sexo': string;
+  'telefono': string;
+  'direccion': string;
+  'activo': boolean;
 }
