@@ -3,5 +3,5 @@ export class Usuario {
   'password': string;
   'email': string;
   'activo': boolean;
-  'fecCreacion': Date;
+  'fecCreacion': string;
 }

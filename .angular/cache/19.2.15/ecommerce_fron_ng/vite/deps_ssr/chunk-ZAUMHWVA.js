@@ -4,7 +4,10 @@ import {
   BrowserModule,
   EVENT_MANAGER_PLUGINS,
   EventManagerPlugin
-} from "./chunk-NLNZY2MI.js";
+} from "./chunk-DZYTNK7T.js";
+import {
+  HTTP_ROOT_INTERCEPTOR_FNS
+} from "./chunk-TSDW7S4V.js";
 import {
   NullViewportScroller,
   PlatformLocation,
@@ -12,9 +15,6 @@ import {
   getDOM,
   setRootDomAdapter
 } from "./chunk-XZIY4MOL.js";
-import {
-  HTTP_ROOT_INTERCEPTOR_FNS
-} from "./chunk-TSDW7S4V.js";
 import {
   DOCUMENT,
   PLATFORM_SERVER_ID,
@@ -16840,4 +16840,4 @@ export {
    * License: MIT
    *)
 */
-//# sourceMappingURL=chunk-LAYBTWCC.js.map
+//# sourceMappingURL=chunk-ZAUMHWVA.js.map

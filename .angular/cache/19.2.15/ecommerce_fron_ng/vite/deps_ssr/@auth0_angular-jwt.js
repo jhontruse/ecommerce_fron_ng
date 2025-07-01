@@ -1,8 +1,8 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
-import "./chunk-XZIY4MOL.js";
 import {
   HTTP_INTERCEPTORS
 } from "./chunk-TSDW7S4V.js";
+import "./chunk-XZIY4MOL.js";
 import {
   DOCUMENT
 } from "./chunk-POUHVWWY.js";

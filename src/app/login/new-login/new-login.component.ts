@@ -6,18 +6,23 @@ import {
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
-import { switchMap } from 'rxjs';
 import { ActivatedRoute, Router } from '@angular/router';
 import { UsuarioDTO } from '../../model/dto/UsuarioDTO';
 import { Rol } from '../../model/Rol';
 import { UsuarioService } from '../../services/usuario.service';
 import { Usuario } from '../../model/Usuario';
+import { Persona } from '../../model/Persona';
+import { formatDate, registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import { LOCALE_ID } from '@angular/core';
+registerLocaleData(localeEs, 'es-ES');
 
 @Component({
   selector: 'app-new-login',
   imports: [ReactiveFormsModule],
   templateUrl: './new-login.component.html',
   styleUrl: './new-login.component.css',
+  providers: [{ provide: LOCALE_ID, useValue: 'es-ES' }],
 })
 export class NewLoginComponent implements OnInit {
   constructor(
@@ -48,42 +53,48 @@ export class NewLoginComponent implements OnInit {
   operate(): void {
     const rol: Rol = new Rol();
     const usuario: Usuario = new Usuario();
+    const persona: Persona = new Persona();
+    const currentDate = new Date();
+    const formattedDate = formatDate(
+      currentDate,
+      'yyyy-MM-dd HH:mm:ss',
+      'es-ES'
+    );
     if (this.miFormulario.valid) {
       console.log('Formulario válido ' + this.miFormulario.value['usuario']);
+
       usuario.usuario = this.miFormulario.value['usuario'];
-      //this.form.value['idPatient']
+      usuario.password = this.miFormulario.value['password'];
+      usuario.email = this.miFormulario.value['email'];
+      usuario.activo = true;
+      usuario.fecCreacion = formattedDate; // Formatear la fecha a 'yyyy-MM-dd HH:mm:ss'
+
+      persona.dni = this.miFormulario.value['dni'];
+      persona.nombre = this.miFormulario.value['nombre'];
+      persona.apePaterno = this.miFormulario.value['apePaterno'];
+      persona.apeMaterno = this.miFormulario.value['apeMaterno'];
+      persona.sexo = this.miFormulario.value['sexo'];
+      persona.telefono = this.miFormulario.value['telefono'];
+      persona.direccion = this.miFormulario.value['direccion'];
+      persona.activo = true;
+
+      rol.idRol = 'a40913f4-3b7c-11f0-bc0e-5762e55600fc';
+
       this.usuarioDTO.usuario = usuario;
-      /*usuarioDTO.usuario.password = this.miFormulario.value['password'];
-      usuarioDTO.usuario.email = this.miFormulario.value['email'];
-      usuarioDTO.usuario.activo = true;
-      usuarioDTO.usuario.fecCreacion = new Date();
+      this.usuarioDTO.persona = persona;
+      this.usuarioDTO.rol = [rol];
 
-      usuarioDTO.persona.dni = this.miFormulario.value['dni'];
-      usuarioDTO.persona.nombre = this.miFormulario.value['nombre'];
-      usuarioDTO.persona.apePaterno = this.miFormulario.value['apePaterno'];
-      usuarioDTO.persona.apeMaterno = this.miFormulario.value['apeMaterno'];
-      usuarioDTO.persona.sexo = this.miFormulario.value['sexo'];
-      usuarioDTO.persona.telefono = this.miFormulario.value['telefono'];
-      usuarioDTO.persona.direccion = this.miFormulario.value['direccion'];
-      usuarioDTO.persona.activo = true;*/
+      console.log('UsuarioDTO antes de enviar:', this.usuarioDTO);
 
-      //rol.idRol = 'a40913f4-3b7c-11f0-bc0e-5762e55600fc';
-      //usuarioDTO.rol.push(rol); // Asignar un rol por defecto, por ejemplo, 1 para usuario normal
-
-      //console.log('UsuarioDTO antes de enviar:', this.usuarioDTO);
-
-      /*this.usuarioService.postUsuarioDTO(this.usuarioDTO).subscribe({
+      this.usuarioService.postUsuarioDTO(this.usuarioDTO).subscribe({
         next: (response) => {
           console.log('Usuario creado exitosamente', response);
           this.router.navigate(['/login']); // Redirigir al login después de crear el usuario
         },
         error: (error) => {
           console.error('Error al crear el usuario', error);
-          // Manejar el error, por ejemplo, mostrar un mensaje al usuario
         },
-      });*/
-
-      //console.log('Formulario válido', this.miFormulario.value);
+      });
     } else {
       console.log('Formulario inválido');
       this.miFormulario.markAllAsTouched(); // Marca todos los campos como tocados
