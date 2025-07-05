@@ -100,4 +100,8 @@ export class NewLoginComponent implements OnInit {
       this.miFormulario.markAllAsTouched(); // Marca todos los campos como tocados
     }
   }
+
+  get f() {
+    return this.miFormulario.controls;
+  }
 }

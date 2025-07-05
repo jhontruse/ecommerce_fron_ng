@@ -20,6 +20,10 @@
             formControlName="usuario"
           />
           <label for="usuario">Usuario</label>
+
+          @if (f['usuario'].errors?.['required'] && f['usuario'].touched) {
+          <small class="invalid">Is required</small>
+          }
         </div>
         <div class="new-login-input-comp">
           <input

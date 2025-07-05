@@ -5,7 +5,7 @@
   justify-content: center;
   height: 100vh; /* Ocupa toda la altura de la ventana */
   width: 100vw; /* Ocupa toda la anchura de la ventana */
-  position: relative; /* Permite posicionar elementos hijos */
+  /*position: relative; /* Permite posicionar elementos hijos */
   overflow: hidden; /* Evita el desbordamiento de contenido */
   background-image: url("/img/login/wallpaper_login_full.png");
   background-size: cover; /* Ajusta la imagen sin distorsionarla */
@@ -14,218 +14,176 @@
   background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 .login_formulario {
-  position: relative; /* Permite posicionar elementos hijos */
+  /* position: relative; /* Permite posicionar elementos hijos */
   width: 380px; /* Ancho del formulario */
   height: auto;
   border-radius: 20px; /* Bordes redondeados */
-  backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
-  background: (rgba(255, 255, 255, 0.1)); /* Fondo semitransparente */
+  backdrop-filter: blur(5px); /* Desenfoque del fondo */
   border: 1px solid rgba(255, 255, 255, 0.4); /* Borde semitransparente */
   box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1), 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
-  z-index: 10; /* Asegura que el formulario esté por encima de otros elementos */
+  /*z-index: 10; /* Asegura que el formulario esté por encima de otros elementos */
   padding: 40px; /* Espacio interno del formulario */
   display: flex; /* Utiliza flexbox para alinear los elementos */
   flex-direction: column; /* Coloca los elementos en columna */
-  align-items: center; /* Centra los elementos horizontalmente */
+  align-items: flex-start; /* Centra los elementos horizontalmente */
   overflow: hidden; /* Evita el desbordamiento de contenido */
 }
-.login_header {
-  text-align: center;
+.login-header {
+  width: 100%; /* Ancho completo del encabezado */
+  text-align: center; /* Centra el texto */
+  border: 1px solid rgba(231, 8, 8, 1); /* Borde semitransparente */
 }
-.login_header h1 {
-  font-size: 2.5rem; /* Tamaño de fuente grande */
+.login-header h1 {
   color: #fff; /* Color del texto */
-  margin-bottom: 20px; /* Espacio debajo del título */
-  font-family: "Courier New", Courier, monospace;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombra del texto para dar profundidad */
-  font-weight: bold; /* Negrita para el título */
-  letter-spacing: 1px; /* Espaciado entre letras */
-  text-transform: uppercase; /* Transforma el texto a mayúsculas */
-  margin-top: 0; /* Elimina el margen superior */
+  border: 1px solid rgba(144, 9, 193, 1); /* Borde semitransparente */
+  margin: 0%;
 }
-.login_header p {
-  font-size: 1rem; /* Tamaño de fuente más pequeño */
+.login-header p {
   color: #fff; /* Color del texto */
-  margin-bottom: 30px; /* Espacio debajo del párrafo */
+  border: 1px solid rgba(55, 215, 37, 1); /* Borde semitransparente */
+  margin: 10px 0 0 0; /* Margen inferior para separar del formulario */
 }
-.login_body {
-  width: 100%; /* Ancho completo del contenedor */
+.login-body {
+  width: 100%; /* Ancho completo del cuerpo */
+  border: 1px solid rgba(66, 21, 228, 0.4); /* Borde semitransparente */
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: flex-start; /* Centra los elementos verticalmente */
+}
+.login-body-input {
+  width: 100%; /* Ancho completo del cuerpo */
+  height: 90px;
+  border: 1px solid rgba(187, 244, 43, 1); /* Borde semitransparente */
   display: flex; /* Utiliza flexbox para alinear los elementos */
   flex-direction: column; /* Coloca los elementos en columna */
   align-items: center; /* Centra los elementos horizontalmente */
   justify-content: center; /* Centra los elementos verticalmente */
+}
+.login-body-extra {
+  width: 100%; /* Ancho completo del cuerpo */
+  height: 30px;
+  border: 1px solid rgba(34, 13, 188, 1); /* Borde semitransparente */
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: row; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: space-between; /* Centra los elementos verticalmente */
+  color: #fff; /* Color del texto */
+}
+.login-body-button {
+  width: 100%; /* Ancho completo del cuerpo */
+  height: 50px;
+  border: 1px solid rgba(193, 98, 14, 1); /* Borde semitransparente */
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: center; /* Centra los elementos verticalmente */
+  color: #fff; /* Color del texto */
+}
+.login-footer {
+  width: 100%; /* Ancho completo del cuerpo */
+  height: 30px;
+  border: 1px solid rgba(66, 21, 228, 1); /* Borde semitransparente */
+  display: flex; /* Utiliza flexbox para alinear los elementos */
+  flex-direction: column; /* Coloca los elementos en columna */
+  align-items: center; /* Centra los elementos horizontalmente */
+  justify-content: flex-start; /* Centra los elementos verticalmente */
+  color: #fff; /* Color del texto */
 }
 .form-group {
   position: relative;
-  width: 80%; /* Ancho completo del campo de formulario */
-  margin-bottom: 15px; /* Espacio entre los campos del formulario */
-  margin-top: 15px; /* Espacio entre los campos del formulario */
+  margin: 2rem 0;
+  width: 80%;
+  border: 1px solid rgb(29, 184, 1); /* Borde semitransparente */
 }
-input[type="text"],
-input[type="password"] {
+.form-input {
   width: 100%;
-  padding: 12px 10px;
+  padding: 10px 10px 10px 10px;
+  font-size: 16px;
   border: none;
-  border-bottom: 2px solid #999797;
+  border-bottom: 0px solid #ccc;
   background: transparent;
-  font-size: 16px;
+  transition: all 0.7s ease;
+}
+.form-input:focus {
   outline: none;
-  transition: border-color 0.3s;
+  border-bottom: 0px solid #ff0000;
+  transition: all 0.7s ease;
 }
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  border-color: #4a4848;
-}
-label {
+.form-label {
   position: absolute;
-  top: 12px;
-  left: 10px;
-  color: #7d7c7c;
-  font-weight: bold;
+  top: 10px;
+  left: 0;
   font-size: 16px;
+  color: #999;
   pointer-events: none;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
+}
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+  top: -16px;
+  font-size: 12px;
+  color: #26ff00;
+}
+.form-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background: #cd0ac0;
+  transition: 0.7s ease;
+}
+.form-input:focus ~ .form-line {
+  width: 100%;
 }
 
-input[type="text"]:focus + label,
-input[type="password"]:focus + label,
-input[type="text"]:not(:placeholder-shown) + label,
-input[type="password"]:not(:placeholder-shown) + label {
-  top: -12px;
-  left: 5px;
-  font-size: 18px;
-  color: #4a4949;
+.checkbox-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
-.form-checkbox {
-  display: flex; /* Utiliza flexbox para alinear los elementos */
-  flex-direction: row; /* Coloca los elementos en fila */
-  align-items: center; /* Centra los elementos verticalmente */
-  justify-content: space-between; /* Centra los elementos horizontalmente */
-  width: 85%; /* Ancho completo del campo de formulario */
-  margin-bottom: 15px; /* Espacio entre los campos del formulario */
-  margin-top: 15px; /* Espacio entre los campos del formulario */
-}
-.checkbox-group {
+.checkbox-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 12px;
+  font-size: 1rem;
+  color: #343a40;
+  cursor: pointer;
+  position: relative;
 }
-
-.checkbox-group input[type="checkbox"] {
+.checkbox-container input[type="checkbox"] {
   appearance: none;
   width: 22px;
   height: 22px;
-  border: 2px solid #aaa;
-  border-radius: 4px;
-  background-color: transparent;
-  cursor: pointer;
+  border: 2px solid #0bdfb1;
+  border-radius: 6px;
+  background-color: #d00707;
+  transition: all 0.3s ease;
   position: relative;
-  transition: border-color 0.3s ease, background-color 0.3s ease, transform 0.2s;
+  cursor: pointer;
 }
-
-.checkbox-group input[type="checkbox"]:hover {
-  transform: scale(1.05);
-  border-color: #000;
+.checkbox-container input[type="checkbox"]:hover {
+  box-shadow: 0 0 0 4px rgba(189, 11, 224, 1);
 }
-
-.checkbox-group input[type="checkbox"]:checked {
-  border-color: #000;
-  background-color: #000;
+.checkbox-container input[type="checkbox"]:checked {
+  background-color: #bcfa1d;
+  border-color: #ee4613;
 }
-
-.checkbox-group input[type="checkbox"]::after {
+.checkbox-container input[type="checkbox"]::after {
   content: "";
   position: absolute;
-  width: 6px;
-  height: 12px;
-  border: solid #fff;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg) scale(0);
   top: 2px;
-  left: 7px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
   opacity: 0;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.checkbox-group input[type="checkbox"]:checked::after {
-  transform: rotate(45deg) scale(1);
-  opacity: 1;
-}
-
-.checkbox-group label {
-  font-size: 16px;
-  color: #333;
-  cursor: pointer;
-  transition: color 0.2s;
-}
-
-.checkbox-group input[type="checkbox"]:hover + label {
-  color: #000;
-}
-.checkbox-group p {
-  font-size: 14px;
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.password-reset a {
-  color: #ffffff;
-  text-decoration: none; /* Elimina el subrayado del enlace */
-}
-.login-button {
-  width: 85%;
-  padding: 12px;
-  display: flex; /* Utiliza flexbox para alinear los elementos */
-  flex-direction: column; /* Coloca los elementos en columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  justify-content: center; /* Centra los elementos verticalmente */
-  border: none; /* Sin borde */
-}
-.btn {
-  position: relative; /* Permite posicionar elementos hijos */
-  width: 80%; /* Ancho del formulario */
-  height: auto;
-  border-radius: 20px; /* Bordes redondeados */
-  backdrop-filter: blur(10px); /* Aplica un desenfoque al fondo */
-  background: (rgba(255, 255, 255, 0.8)); /* Fondo semitransparente */
-  border: 1px solid rgba(255, 255, 255, 0.8); /* Borde semitransparente */
-  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.9), 0 10px 20px rgba(0, 0, 0, 0.4); /* Sombra para dar profundidad */
-  z-index: 20; /* Asegura que el formulario esté por encima de otros elementos */
-  padding: 15px; /* Espacio interno del formulario */
-  display: flex; /* Utiliza flexbox para alinear los elementos */
-  flex-direction: column; /* Coloca los elementos en columna */
-  align-items: center; /* Centra los elementos horizontalmente */
-  overflow: hidden; /* Evita el desbordamiento de contenido */
-  cursor: pointer;
   transition: all 0.3s ease;
-  letter-spacing: 0.5px;
-  font-size: 20px;
-  color: #4b4b4b;
 }
-
-.btn:hover {
-  background-color: #222;
-  transform: scale(1.03);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-  color: #fff; /* Cambia el color del texto al pasar el ratón */
-}
-
-.btn:active {
-  transform: scale(0.98);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  color: #4b4b4b;
-}
-.login-user-new {
-  width: 100%;
-  text-align: center;
-  color: #fff;
-  padding: 10px;
-}
-.login-user-new a {
-  cursor: pointer;
-  color: #ffffff;
-  font-weight: bold; /* Negrita para el título */
+.checkbox-container input[type="checkbox"]:checked::after {
+  opacity: 1;
 }
